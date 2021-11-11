@@ -38,7 +38,12 @@ requirements:
     - r-rcpp >=0.12.13
     - r-ape
     - r-dirmult
+    - r-foreach
+    - r-ggplot2
+    - r-ggrepel
+    - r-lmertest
     - r-matrixstats
+    - r-modeest
     - r-rmutil
     - r-statmod
     - r-vegan
@@ -50,7 +55,12 @@ requirements:
     - r-rcpp >=0.12.13
     - r-ape
     - r-dirmult
+    - r-foreach
+    - r-ggplot2
+    - r-ggrepel
+    - r-lmertest
     - r-matrixstats
+    - r-modeest
     - r-rmutil
     - r-statmod
     - r-vegan
