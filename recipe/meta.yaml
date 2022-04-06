@@ -1,4 +1,4 @@
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GUniFrac_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GUniFrac/GUniFrac_{{ version }}.tar.gz
-  sha256: 68528d34cfd223eb66f0ac352a14fbdc6ef154bf788749215f3d34d6a14ecab7
+  sha256: 6ad57b3938c8db89d723cce8d5920c753c9f00961c325e847e50c3ac65457252
 
 build:
   merge_build_host: true  # [win]
