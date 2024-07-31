@@ -1,6 +1,5 @@
 {% set version = "1.8" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-gunifrac
@@ -13,8 +12,7 @@ source:
   sha256: aea41a3f94fe1fff4f4284f786a43f90bfd4f7f3c9db067c17c6e8b3206a80fb
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,7 +34,9 @@ requirements:
     - r-statmod                  # [build_platform != target_platform]
     - r-vegan                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -63,7 +63,6 @@ requirements:
     - r-vegan
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-matrix
     - r-rcpp >=0.12.13
